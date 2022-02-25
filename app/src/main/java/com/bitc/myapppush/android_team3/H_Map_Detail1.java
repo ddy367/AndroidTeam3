@@ -1,41 +1,32 @@
 package com.bitc.myapppush.android_team3;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuBuilder;
 
-import android.content.ClipData;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Gallery;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class k_Main extends AppCompatActivity {
-
-    ViewFlipper vFllipper;
+public class H_Map_Detail1 extends AppCompatActivity {
 
     BottomNavigationView bottomNavi;
 
-    @SuppressWarnings("deprecation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.k_main);
+        setContentView(R.layout.activity_h_map_detail1);
+//        setTitle("T3 도서 리뷰 커뮤니티");
+//        액션바 뒤로가기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("오시는 길");
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
-//        바텀 네비게이션 이동
+        //        바텀 네비게이션 이동
         bottomNavi = findViewById(R.id.bottom_navigation);
         bottomNavi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -44,47 +35,13 @@ public class k_Main extends AppCompatActivity {
                 return true;
             }
         });
-
-
-
-//        갤러리 - 이 달의 추천 도서
-        Gallery gallery = findViewById(R.id.galleryBook);
-        TextView textView = findViewById(R.id.tv1);
-
-        k_MainGalleryAdapter galAdapter = new k_MainGalleryAdapter(this);
-        gallery.setAdapter(galAdapter);
-
-
-//        플리퍼 배너
-        int images[] = {
-                R.drawable.flipper1,
-                R.drawable.flipper2,
-                R.drawable.flipper3,
-        };
-        vFllipper = findViewById(R.id.image_slide);
-
-        for(int image : images) {
-            fllipperImages(image);
-        }
-
     }
 
-    public void fllipperImages(int image) {
-        ImageView imageView = new ImageView(this);
-        imageView.setBackgroundResource(image);
-
-        vFllipper.addView(imageView);
-        vFllipper.setFlipInterval(3000);
-        vFllipper.setAutoStart(true);
-
-        vFllipper.setInAnimation(this,android.R.anim.slide_in_left);
-        vFllipper.setOutAnimation(this,android.R.anim.slide_out_right);
-
-    }
-
-    /*액션 바 이동*/
+    /*액션 바 메뉴*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        //      getMenuInflater().inflate(R.menu.k_actionbar_actions, menu);
+
         getMenuInflater().inflate(R.menu.k_bottom_navigation, menu);
 
         return true;
@@ -92,14 +49,15 @@ public class k_Main extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+        switch (item.getItemId())
+        {
             case R.id.tab1:
 //                Intent intent1 = new Intent(getApplicationContext(), H_Map.class);
 //                startActivity(intent1);
                 break;
             case R.id.tab2:
-//                Intent intent2 = new Intent(getApplicationContext(), H_Map.class);
-//                startActivity(intent2);
+                Intent intent2 = new Intent(getApplicationContext(), H_Map.class);
+                startActivity(intent2);
                 break;
             case R.id.tab3:
                 Intent intent3 = new Intent(getApplicationContext(), k_Main.class);

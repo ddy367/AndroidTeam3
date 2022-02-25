@@ -8,7 +8,16 @@
         android:label="Team3"
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Android_team3">
+        android:theme="@style/Theme.AndroidTeam3">
+        <!-- H_Map   지도 페이지 -->
+        <activity
+            android:name=".H_Map_Detail1"
+            android:exported="true"
+            android:parentActivityName=".H_Map"></activity>
+        <activity
+            android:name=".H_Map"
+            android:exported="true"
+            android:parentActivityName=".k_Main"></activity> <!-- k_Main   메인 페이지 -->
         <activity
             android:name=".k_Main"
             android:exported="true">
