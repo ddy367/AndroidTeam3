@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bitc.myapppush.android_team3">
+    package="com.bitc">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_main"
-        android:label="Team3"
-        android:roundIcon="@mipmap/ic_main_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidTeam3">
+        android:theme="@style/Theme.MyApp0209">
+        <!--H_Main  게시글 페이지-->
+        <activity
+            android:name=".H_BoardWrite"
+            android:exported="false"
+            android:parentActivityName=".H_Board" />
+        <activity
+            android:name=".H_Board"
+            android:exported="true"
+            android:parentActivityName="k_Main"/>
         <!-- H_Map   지도 페이지 -->
         <activity
             android:name=".H_Map_Detail1"
             android:exported="true"
-            android:parentActivityName=".H_Map"></activity>
+            android:parentActivityName=".H_Map" />
         <activity
             android:name=".H_Map"
             android:exported="true"
-            android:parentActivityName=".k_Main"></activity> <!-- k_Main   메인 페이지 -->
+            android:parentActivityName="k_Main" />
+        <!--k_Main  메인 페이지-->
         <activity
             android:name=".k_Main"
             android:exported="true">

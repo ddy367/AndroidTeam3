@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.bitc.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class H_Map_Detail1 extends AppCompatActivity {

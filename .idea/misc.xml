@@ -3,11 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/admin/Documents/AndroidTeam3/app/src/main/res/layout/activity_h_map.xml" value="0.10185185185185185" />
-        <entry key="..\:/Users/admin/Documents/AndroidTeam3/app/src/main/res/layout/activity_h_map_detail1.xml" value="0.2796296296296296" />
-        <entry key="..\:/Users/admin/Documents/AndroidTeam3/app/src/main/res/layout/k_main.xml" value="0.10185185185185185" />
-        <entry key="..\:/Users/admin/Documents/AndroidTeam3/app/src/main/res/menu/k_bottom_navigation.xml" value="0.2796296296296296" />
-        <entry key="..\:/android_team3/app/src/main/res/layout/k_main.xml" value="0.1" />
+        <entry key="..\:/Users/Pc/AndroidStudioProjects/MyApp0209/app/src/main/res/drawable/ic_edit_24.xml" value="0.222" />
+        <entry key="..\:/Users/Pc/AndroidStudioProjects/MyApp0209/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Pc/AndroidStudioProjects/MyApp0209/app/src/main/res/layout/activity_write.xml" value="0.33695652173913043" />
+        <entry key="..\:/Users/Pc/AndroidStudioProjects/MyApp0209/app/src/main/res/layout/item_main.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Desktop/AndroidTeam33/app/src/main/res/layout/activity_h_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/admin/Desktop/AndroidTeam33/app/src/main/res/layout/activity_h_map.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/admin/Desktop/AndroidTeam33/app/src/main/res/layout/activity_h_write.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Desktop/AndroidTeam33/app/src/main/res/layout/h_item_main.xml" value="0.33" />
+        <entry key="..\:/Users/admin/Desktop/AndroidTeam33/app/src/main/res/layout/k_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/admin/Desktop/aaaaaaa/app/src/main/res/layout/activity_h_main.xml" value="0.24722222222222223" />
+        <entry key="..\:/Users/admin/Desktop/aaaaaaa/app/src/main/res/layout/activity_h_map.xml" value="0.30185185185185187" />
+        <entry key="..\:/Users/admin/Desktop/aaaaaaa/app/src/main/res/layout/item_main.xml" value="0.24722222222222223" />
+        <entry key="..\:/Users/admin/Desktop/aaaaaaa/app/src/main/res/layout/k_main.xml" value="0.1" />
+        <entry key="..\:/Users/admin/Desktop/aaaaaaa/app/src/main/res/menu/k_bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/java404/android/MyApp0209/app/src/main/res/layout/activity_main.xml" value="0.1875" />
+        <entry key="..\:/java404/android/MyApp0209/app/src/main/res/layout/activity_write.xml" value="0.33" />
+        <entry key="..\:/java404/android/MyApp0209/app/src/main/res/layout/item_main.xml" value="0.1875" />
       </map>
     </option>
   </component>

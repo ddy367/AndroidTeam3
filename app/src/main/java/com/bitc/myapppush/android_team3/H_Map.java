@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bitc.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class H_Map extends AppCompatActivity {

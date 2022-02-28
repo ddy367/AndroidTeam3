@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.Gallery;
 import android.widget.ImageView;
 
+import com.bitc.R;
+
 @SuppressWarnings("deprecation")
 public class k_MainGalleryAdapter extends BaseAdapter {
     Context context;

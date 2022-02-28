@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.bitc.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class k_Main extends AppCompatActivity {
