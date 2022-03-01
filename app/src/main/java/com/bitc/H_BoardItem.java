@@ -1,21 +1,25 @@
 package com.bitc;
 
+import android.view.View;
+
 public class H_BoardItem {
 
     private String id;
     private String title;
     private String contents;
     private String name;
+    private int visible;
 
     public H_BoardItem() {
 
     }
 
-    public H_BoardItem(String id, String title, String contents, String name) {
+    public H_BoardItem(String id, String title, String contents, String name, int visible) {
         this.id = id;
         this.title = title;
         this.contents = contents;
         this.name = name;
+        this.visible = visible;
     }
 
     public String getId() {
@@ -48,6 +52,14 @@ public class H_BoardItem {
 
     public void setName(String contents) {
         this.name = name;
+    }
+
+    public int getVisible() {
+        return visible;
+    }
+
+    public void setVisible(int visible) {
+        this.visible = visible;
     }
 
     @Override

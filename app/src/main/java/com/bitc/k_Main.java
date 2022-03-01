@@ -1,6 +1,7 @@
 package com.bitc;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -145,7 +146,15 @@ public class k_Main extends AppCompatActivity {
                 startActivity(intent5);
                 break;
             case Menu.FIRST+10:
-                new L_BackgroundTask().execute();
+                Intent intent6 = new Intent(getApplicationContext(), L_MemberListActivity.class);
+                startActivity(intent6);
+//                new L_BackgroundTask() {
+//                    @Override
+//                    public void setContext(Context context) {
+//                        super.setContext(context);
+//                        setContext(getApplicationContext());
+//                    }
+//                }.execute();
                 break;
             case Menu.FIRST:
                 editor.clear();

@@ -33,6 +33,8 @@ public class L_MemberListActivity extends AppCompatActivity {
     private List<L_User> userList;
     BottomNavigationView bottomNavi;
 
+    String target = "http://haun2.ivyro.net/List.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,6 +1,7 @@
 package com.bitc;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 
@@ -14,7 +15,19 @@ public class L_BackgroundTask extends AsyncTask<Void, Void, String> {
     //모든회원에 대한 정보를 가져오기 위한 쓰레드
 
     String target;
-    private Activity parentActivity;
+
+    //    private Activity parentActivity;
+
+//    public Context getContext() {
+//        return context;
+//    }
+
+//    public void setContext(Context context) {
+//        this.context = context;
+//    }
+
+    private Context mContext;
+
 
     @Override
     protected void onPreExecute() {
@@ -27,6 +40,8 @@ public class L_BackgroundTask extends AsyncTask<Void, Void, String> {
 
         try{
             URL url = new URL(target);//URL 객체 생성
+
+            mContext = MyApp.ApplicationContext();
 
             //URL을 이용해서 웹페이지에 연결하는 부분
             HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
@@ -66,9 +81,9 @@ public class L_BackgroundTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Intent intent = new Intent(parentActivity, L_MemberListActivity.class);
+        Intent intent = new Intent(mContext, L_MemberListActivity.class); //parentActivity값이 널이라서 현재 에러가 나고 있습니다
         intent.putExtra("userList", result);//파싱한 값을 넘겨줌
-        parentActivity.startActivity(intent);//ManagementActivity로 넘어감
+        mContext.startActivity(intent);//ManagementActivity로 넘어감
     }
 
 }
