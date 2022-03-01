@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "602015501208",
+    "project_id": "a-board-17143",
+    "storage_bucket": "a-board-17143.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602015501208:android:0d3f7f09282aa668ab39ed",
+        "android_client_info": {
+          "package_name": "com.bitc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602015501208-h4su4eq3sva7dvanrvrng4jjqieqr5gp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCYOykapkr6jMcuYoTdVcIIU4sBgLzPp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602015501208-h4su4eq3sva7dvanrvrng4jjqieqr5gp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
