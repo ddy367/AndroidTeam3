@@ -255,14 +255,6 @@ public class H_Board extends AppCompatActivity {
                 startActivity(intent5);
                 break;
             case Menu.FIRST+10:
-                final Context context1 = MyApp.ApplicationContext();
-//                new L_BackgroundTask() {
-//                    @Override
-//                    public void setContext(Context context) {
-//                        super.setContext(context);
-//                        setContext(getApplicationContext());
-//                    }
-//                }.execute();
                 new L_BackgroundTask().execute();
                 break;
             case Menu.FIRST:

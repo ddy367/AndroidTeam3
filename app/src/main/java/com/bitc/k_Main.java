@@ -146,15 +146,7 @@ public class k_Main extends AppCompatActivity {
                 startActivity(intent5);
                 break;
             case Menu.FIRST+10:
-                Intent intent6 = new Intent(getApplicationContext(), L_MemberListActivity.class);
-                startActivity(intent6);
-//                new L_BackgroundTask() {
-//                    @Override
-//                    public void setContext(Context context) {
-//                        super.setContext(context);
-//                        setContext(getApplicationContext());
-//                    }
-//                }.execute();
+                new L_BackgroundTask().execute();
                 break;
             case Menu.FIRST:
                 editor.clear();
@@ -208,5 +200,82 @@ public class k_Main extends AppCompatActivity {
 
 
         }
+    }
+
+    class L_BackgroundTask extends AsyncTask<Void, Void, String> {
+        //모든회원에 대한 정보를 가져오기 위한 쓰레드
+
+        String target;
+
+        //    private Activity parentActivity;
+
+//    public Context getContext() {
+//        return context;
+//    }
+
+//    public void setContext(Context context) {
+//        this.context = context;
+//    }
+
+//        private Context mContext;
+
+
+        @Override
+        protected void onPreExecute() {
+            //List.php은 파싱으로 가져올 웹페이지
+            target = "http://haun2.ivyro.net/List.php";
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+
+            try{
+                URL url = new URL(target);//URL 객체 생성
+
+//                mContext = MyApp.ApplicationContext();
+
+                //URL을 이용해서 웹페이지에 연결하는 부분
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
+
+                //바이트단위 입력스트림 생성 소스는 httpURLConnection
+                InputStream inputStream = httpURLConnection.getInputStream();
+
+                //웹페이지 출력물을 버퍼로 받음 버퍼로 하면 속도가 더 빨라짐
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                String temp;
+
+                //문자열 처리를 더 빠르게 하기 위해 StringBuilder클래스를 사용함
+                StringBuilder stringBuilder = new StringBuilder();
+
+                //한줄씩 읽어서 stringBuilder에 저장함
+                while((temp = bufferedReader.readLine()) != null){
+                    stringBuilder.append(temp + "\n");//stringBuilder에 넣어줌
+                }
+
+                //사용했던 것도 다 닫아줌
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return stringBuilder.toString().trim();//trim은 앞뒤의 공백을 제거함
+
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            return null;
+
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            Intent intent = new Intent(k_Main.this, L_MemberListActivity.class); //parentActivity값이 널이라서 현재 에러가 나고 있습니다
+            intent.putExtra("userList", result);//파싱한 값을 넘겨줌
+            k_Main.this.startActivity(intent);//ManagementActivity로 넘어감
+        }
+
     }
 }
